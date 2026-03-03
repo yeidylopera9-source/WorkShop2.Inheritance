@@ -23,7 +23,7 @@ namespace GeometricFigures.Backend
         
         public override double GetPerimiter() => 4 * A;
       
-        public double ValidateA(double a)
+        private double ValidateA(double a)
         {
             if (a < 10)
             {
