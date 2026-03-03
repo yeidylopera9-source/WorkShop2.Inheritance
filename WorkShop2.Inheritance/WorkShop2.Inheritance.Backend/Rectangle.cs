@@ -7,7 +7,7 @@ namespace GeometricFigures.Backend
     public class Rectangle : Square
     {
         private double _b;
-        public Rectangle(int name, double a, double b) : base(name, a)
+        public Rectangle(string name, double a, double b) : base(name, a)
         {
             B = b;
         }
@@ -15,7 +15,7 @@ namespace GeometricFigures.Backend
         public double B 
         {
             get => _b; 
-            set => _b = value;
+            set => _b = ValidateB(value);
         }
 
         public override double GetArea() => A * B;
@@ -24,7 +24,7 @@ namespace GeometricFigures.Backend
 
         private double ValidateB(double b)
         {
-            if (b < 70000)
+            if (b < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(b), "Is invalid. ");
             }

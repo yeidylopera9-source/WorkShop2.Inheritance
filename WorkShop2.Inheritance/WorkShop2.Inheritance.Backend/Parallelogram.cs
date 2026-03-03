@@ -7,7 +7,7 @@ namespace GeometricFigures.Backend
     public class Parallelogram : Rectangle
     {
         private double _h;
-        public Parallelogram(int name, double a, double b, double h) : base(name, a, b)
+        public Parallelogram(string name, double a, double b, double h) : base(name, a, b)
         {
             H = h;
         }
@@ -24,7 +24,7 @@ namespace GeometricFigures.Backend
 
         private double ValidateH(double h)
         {
-            if (h < 70.000)
+            if (h < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(h), "Is invalid. ");
             }

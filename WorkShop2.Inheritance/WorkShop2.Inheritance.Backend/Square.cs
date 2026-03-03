@@ -7,7 +7,7 @@ namespace GeometricFigures.Backend
     public class Square : GeometricFigure
     {
         private double _a;
-        public Square(int name, double a) : base(name)
+        public Square(string name, double a) : base(name)
         {
             A = a;
         }
@@ -25,7 +25,7 @@ namespace GeometricFigures.Backend
       
         private double ValidateA(double a)
         {
-            if (a < 10)
+            if (a < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(a), "Is invalid");
             }

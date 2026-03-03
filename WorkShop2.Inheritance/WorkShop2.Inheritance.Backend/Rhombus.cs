@@ -9,7 +9,7 @@ namespace GeometricFigures.Backend
         private double _d1;
         private double _d2;
 
-        public Rhombus(int name, double a, double d1, double d2) : base(name, a)
+        public Rhombus(string name, double a, double d1, double d2) : base(name, a)
         {
             D1 = d1;
             D2 = d2;
@@ -32,7 +32,7 @@ namespace GeometricFigures.Backend
 
         private double ValidateD1(double d1)
         {
-            if (d1 < 10)
+            if (d1 < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(d1), "Is invalid. ");
             }
@@ -41,7 +41,7 @@ namespace GeometricFigures.Backend
 
         private double ValidateD2(double d2)
         {
-            if (d2 < 10)
+            if (d2 < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(d2), "Is invalid. ");
             }

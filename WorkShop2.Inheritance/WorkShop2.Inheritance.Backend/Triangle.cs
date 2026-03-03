@@ -9,7 +9,7 @@ namespace GeometricFigures.Backend
         private double _c;
         private double _h;
 
-        public Triangle(int name, double a, double b, double c, double h) : base(name, a, b)
+        public Triangle(string name, double a, double b, double c, double h) : base(name, a, b)
         {
             C = c;
             H = h;
@@ -32,7 +32,7 @@ namespace GeometricFigures.Backend
 
         private double ValidateC(double c)
         {
-            if (c < 60.00)
+            if (c < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(c), "Is invalid. ");
             }
@@ -41,7 +41,7 @@ namespace GeometricFigures.Backend
 
         private double ValidateH(double h)
         {
-            if (h < 60.00)
+            if (h < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(h), "Is invalid. ");
             }

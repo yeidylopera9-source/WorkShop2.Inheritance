@@ -8,7 +8,7 @@ namespace GeometricFigures.Backend
     {
         private double _b;
 
-        public Kite(int name, double a, double d1, double d2, double b) : base(name, a, d1, d2)
+        public Kite(string name, double a, double d1, double d2, double b) : base(name, a, d1, d2)
         {
             B = b;
         }
@@ -25,9 +25,9 @@ namespace GeometricFigures.Backend
 
         private double ValidateB(double b)
         {
-            if (b < 10)
+            if (b < 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(b), "Is invalid. ");
+                throw new ArgumentOutOfRangeException(nameof(b), "Kite must be greater than or equal to 0. ");
             }
             return b;
         }

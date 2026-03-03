@@ -8,7 +8,7 @@ namespace GeometricFigures.Backend
     {
         private double _d;
 
-        public Trapeze(int name, double a, double b, double c, double h, double d) : base(name, a, b, c, h)
+        public Trapeze(string name, double a, double b, double c, double h, double d) : base(name, a, b, c, h)
         {
             D = d;
         }
@@ -26,7 +26,7 @@ namespace GeometricFigures.Backend
 
         private double ValidateD(double d)
         {
-            if (d < 70.000)
+            if (d < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(d), "Is invalid. ");
             }

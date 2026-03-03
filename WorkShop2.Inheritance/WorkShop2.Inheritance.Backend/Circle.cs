@@ -9,7 +9,7 @@ namespace GeometricFigures.Backend
 
         private double _r;
 
-        public Circle(int name, double r) : base(name)
+        public Circle(string name, double r) : base(name)
         {
             R = r;
         }
@@ -27,9 +27,9 @@ namespace GeometricFigures.Backend
 
         private double ValidateR(double r)
         {
-            if (r < 6)
+            if (r < 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(r), "Is invalid ");
+                throw new ArgumentOutOfRangeException(nameof(r), "Circle must be greater than or equal to 0. ");
             }
             return r;
         }

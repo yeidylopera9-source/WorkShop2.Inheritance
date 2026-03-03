@@ -4,14 +4,14 @@ namespace GeometricFigures.Backend
 {
     public abstract class GeometricFigure
     {
-        protected GeometricFigure(int name)
+        public GeometricFigure(string name)
         {
             Name = name;
         }
 
-        public int Name { get; } 
+        public string Name { get; } 
         
-        public override string ToString() => $"{Name}\t" + $"Area........: {GetArea(),20:C2}\t" + $"Perimiter: {GetPerimiter(),20:C2}";
+        public override string ToString() => $"{Name, - 8}" + $"\t => Area........: {GetArea(),12:C5}\t" + $"\tPerimiter: {GetPerimiter(),12:C5}";
         
         public abstract double GetArea();
         public abstract double GetPerimiter();
